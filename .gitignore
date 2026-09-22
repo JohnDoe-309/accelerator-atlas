@@ -1,0 +1,36 @@
+.firecrawl/
+data/
+logs/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.DS_Store
+.gstack/
+.env.*
+!.env.example
+
+# Full dataset stays local. `data/` above already covers data/ and
+# web/public/data/ (the full JSON export); these are belt and braces.
+web/public/data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Virtualenvs, node, build output, deploy links
+venv/
+env/
+node_modules/
+.next/
+out/
+.vercel/
+
+# Logs and caches
+*.log
+.ruff_cache/
+.mypy_cache/
+.cache/

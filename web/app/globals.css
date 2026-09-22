@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf9f5;
+  --color-cream-2: #f3f1ea;
+  --color-cream-3: #ece9df;
+  --color-ink: #181818;
+  --color-ink-2: #2b2a27;
+  --color-ink-3: #4a4945;
+  --color-muted: #807e78;
+  --color-muted-2: #a6a49d;
+  --color-accent: #cc785c;
+  --color-accent-hover: #b56a50;
+  --color-accent-soft: #f1e2da;
+  --color-divider: #e6e3da;
+  --color-success: #3f6b4a;
+  --color-success-soft: #e3ece5;
+  --color-warning: #a96f1d;
+  --color-warning-soft: #f5ead3;
+  --color-danger: #8a3a2a;
+  --color-danger-soft: #f0dcd5;
+
+  --font-serif: "Instrument Serif", "Fraunces", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html, body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.num-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle dotted divider used throughout the shell */
+.hairline {
+  border-color: var(--color-divider);
+}
+
+/* Scrollbar styling, desktop only */
+@media (hover: hover) {
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--color-cream-3); border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-muted-2); }
+}
+
+/* Markdown prose (Insights page) */
+.prose-atlas {
+  color: var(--color-ink-2);
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+.prose-atlas h1, .prose-atlas h2, .prose-atlas h3 {
+  font-family: var(--font-serif);
+  color: var(--color-ink);
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  letter-spacing: -0.01em;
+}
+.prose-atlas h1 { font-size: 2rem; }
+.prose-atlas h2 { font-size: 1.5rem; border-top: 1px solid var(--color-divider); padding-top: 1.4em; }
+.prose-atlas h3 { font-size: 1.2rem; }
+.prose-atlas p { margin: 0.9em 0; }
+.prose-atlas ul { margin: 0.9em 0; padding-left: 1.3em; }
+.prose-atlas ul li { list-style: disc; margin: 0.4em 0; }
+.prose-atlas strong { color: var(--color-ink); font-weight: 600; }
+.prose-atlas code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  background: var(--color-cream-2);
+  border-radius: 4px;
+}
+
+/* Utility */
+.card {
+  background: #fefdfa;
+  border: 1px solid var(--color-divider);
+  border-radius: 12px;
+}
+.card-soft {
+  background: var(--color-cream-2);
+  border: 1px solid var(--color-divider);
+  border-radius: 12px;
+}

@@ -1,0 +1,4 @@
+# Keep the full local export and local env files out of CLI deploys;
+# the demo ships public/sample/ only.
+public/data/
+.env*
