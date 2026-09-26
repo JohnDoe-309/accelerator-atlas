@@ -34,3 +34,7 @@ out/
 .ruff_cache/
 .mypy_cache/
 .cache/
+
+# Default exclusions (secrets, deps, caches)
+.env.example
+.turbo/
